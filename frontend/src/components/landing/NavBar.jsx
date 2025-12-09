@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBar = ({ scrolled, scrollToSection }) => {
   return (
@@ -36,6 +37,13 @@ const NavBar = ({ scrolled, scrollToSection }) => {
                 {item.label}
               </button>
             ))}
+            
+            <Link
+              to="/admin"
+              className="ml-4 px-6 py-2 bg-orange-500 text-white font-medium rounded-lg hover:bg-orange-600 transition-colors shadow-md"
+            >
+              ADMIN
+            </Link>
           </div>
         </div>
       </div>
