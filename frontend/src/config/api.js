@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// Default to local backend port 4000 (matches server.js)
+
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000/api';
 
 const api = axios.create({
@@ -10,7 +10,7 @@ const api = axios.create({
   },
 });
 
-// Add token to requests if available
+
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('adminToken');
